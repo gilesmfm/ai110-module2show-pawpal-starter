@@ -4,8 +4,7 @@
 
 **a. Initial design**
 
-- Briefly describe your initial UML design.
-- What classes did you include, and what responsibilities did you assign to each?
+I'm using four classes: owner, which holds the pet owner's name and heir list of pets; task, a single care activity with a description in minutes, and priority level; and scheduler, which builds a daily plan by fitting tasks into available time, ordered by priority.
 
 **b. Design changes**
 
