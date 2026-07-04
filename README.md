@@ -67,7 +67,14 @@ pytest --cov
 Sample test output:
 
 ```
-# Paste your pytest output here
+platform win32 -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0
+collected 3 items
+
+tests/test_pawpal.py::test_mark_complete_changes_status PASSED         [ 33%]
+tests/test_pawpal.py::test_sort_by_priority_orders_high_first PASSED   [ 66%]
+tests/test_pawpal.py::test_generate_plan_respects_time_budget PASSED   [100%]
+
+=========== 3 passed in 0.07s ===========
 ```
 
 ## 📐 Smarter Scheduling
@@ -76,10 +83,10 @@ Sample test output:
 
 | Feature | Method(s) | Notes |
 |---------|-----------|-------|
-| Task sorting | | e.g., by priority, duration |
-| Filtering | | e.g., skip tasks if time runs out |
-| Conflict handling | | e.g., overlapping time slots |
-| Recurring tasks | | e.g., daily vs. weekly |
+| Task sorting |Scheduler.sort_by_priority()| Sorts tasks so high priority comes before medium, before low |
+| Filtering |Scheduler.generate_plan() | Tasks are skipped once the time budget runs out  |
+| Conflict handling |N/A | e.g., overlapping time slots |
+| Recurring tasks | N/A | e.g., daily vs. weekly |
 
 ## 📸 Demo Walkthrough
 
